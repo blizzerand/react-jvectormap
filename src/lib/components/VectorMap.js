@@ -34,7 +34,7 @@ class VectorMap extends React.PureComponent {
 
         this.$node = $(this.refs.map);
 
-        if (map) {
+        if (map && this.$node) {
             this.$node.vectorMap({...this.props});
             this.$mapObject = this.$node.vectorMap('get', 'mapObject');
         }
@@ -49,7 +49,7 @@ class VectorMap extends React.PureComponent {
         this.$node = $(this.refs.map);
         this.$node.empty(); // remove old one
 
-        if (map) {
+        if (map && this.$node) {
         this.$node.vectorMap({ ...this.props });
         this.$mapObject = this.$node.vectorMap("get", "mapObject");
         }
